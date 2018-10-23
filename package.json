@@ -1,0 +1,26 @@
+{
+  "name": "create-pagin",
+  "version": "1.0.1",
+  "description": "custom pagination for frontend side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejunkers1/create-pagin.git"
+  },
+  "keywords": [
+    "pagin",
+    "javascript",
+    "frontend",
+    "venkata sai",
+    "katepalli"
+  ],
+  "author": "venkata sai katepalli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codejunkers1/create-pagin/issues"
+  },
+  "homepage": "https://github.com/codejunkers1/create-pagin#readme"
+}
