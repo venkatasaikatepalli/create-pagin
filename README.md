@@ -7,6 +7,7 @@
 
 - Create Pagination for user data
 - Create Pagination with sort by key for user data
+- Create Pagination with search by value on selected columns for user data
 
 ## Installing
 
@@ -26,17 +27,24 @@ Generating `Pagination` for Given data
  
  // data for paginating
  var data = [
-    {name: 'Test1', grade: 'A'},
-    {name: 'Test2', grade: 'A'},
-    {name: 'Test3', grade: 'A'},
+    {name: 'Testa', grade: 'A'},
+    {name: 'Test2', grade: 'B'},
+    {name: 'Testa', grade: 'C'},
     {name: 'Test4', grade: 'A'},
  ]
  // Calling paginating module and result to a variable
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2}) // only pagination
+
+ // only pagination
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2}) 
  
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name'}) // pagination with sorting by key ascending
+ // pagination with sorting by key ascending
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name'}) 
  
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: '-name'}) // pagination with sorting by key descending
+ // pagination with sorting by key descending
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: '-name'}) 
+
+ // pagination with search by value and selected columns
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name', search: 'a', search_cols: ['name', 'grade']}) 
 ```
 
 ## Author
