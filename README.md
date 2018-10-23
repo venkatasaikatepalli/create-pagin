@@ -8,6 +8,7 @@
 - Create Pagination for user data
 - Create Pagination with sort by key for user data
 - Create Pagination with search by value on selected columns for user data
+- Create Pagination with Full Text Searching by value
 
 ## Installing
 
@@ -45,6 +46,9 @@ Generating `Pagination` for Given data
 
  // pagination with search by value and selected columns
  var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name', search: 'a', search_cols: ['name', 'grade']}) 
+
+ // Pagination with Full Text Searching by value
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name', full_text_search: 'a'}) 
 ```
 
 ## Author
