@@ -1,10 +1,12 @@
 # create-pagin
-
-Promise based HTTP client for the browser and node.js
+[![npm version](https://img.shields.io/npm/v/create-pagin.svg?style=flat-square)](https://www.npmjs.org/package/create-pagin)
+[![npm downloads](https://img.shields.io/npm/dm/create-pagin.svg?style=flat-square)](http://npm-stat.com/charts.html?package=create-pagin)
+[![LICENSE](https://img.shields.io/github/license/codejunkers1/create-pagin.svg?style=flat-square)](https://github.com/codejunkers1/create-pagin)
 
 ## Features
 
 - Create Pagination for user data
+- Create Pagination with sort by key for user data
 
 ## Installing
 
@@ -29,8 +31,12 @@ Generating `Pagination` for Given data
     {name: 'Test3', grade: 'A'},
     {name: 'Test4', grade: 'A'},
  ]
- // Calking paginating module and result to a variable
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2})
+ // Calling paginating module and result to a variable
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2}) // only pagination
+ 
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name'}) // pagination with sorting by key ascending
+ 
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: '-name'}) // pagination with sorting by key descending
 ```
 
 ## Author
