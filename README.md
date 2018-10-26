@@ -39,16 +39,34 @@ Generating `Pagination` for Given data
  var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2}) 
  
  // pagination with sorting by key ascending
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name'}) 
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sort_by: 'name'}) 
  
  // pagination with sorting by key descending
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: '-name'}) 
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sort_by: '-name'}) 
 
  // pagination with search by value and selected columns
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name', search: 'a', search_cols: ['name', 'grade']}) 
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sort_by: 'name', search: 'a', search_cols: ['name', 'grade']}) 
 
  // Pagination with Full Text Searching by value
- var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sortBy: 'name', full_text_search: 'a'}) 
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sort_by: 'name', search: 'a'})
+
+ // Search the multiple values
+ var result = Pagin.CreatePagin(data, {page_size:10, page_no: 2, sort_by: 'name', search: ['a', 'b']}) 
+
+ // Result values
+ console.log(result);
+ {
+ 		page_size: 10,
+	  page_no: 1,
+	  previous_page: null,
+	  current_page: 1,
+	  next_page: null,
+	  total_pages: null,
+	  data: [],
+	  total: 4,
+	  from: 1,
+	  to: 4
+ }
 ```
 
 ## Author
